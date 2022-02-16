@@ -60,7 +60,7 @@
 			echo "<h3>Historique :</h3>";
 			echo "<ul>";
 
-			if (count($_SESSION['historique']) > 6){
+			if (count($_SESSION['historique']) > 6 && isset($_SESSION['j'])){
 				$_SESSION['j']++;
 			}
 
