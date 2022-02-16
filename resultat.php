@@ -64,7 +64,7 @@
 				$_SESSION['j']++;
 			}
 
-			for($i = count($_SESSION['historique']) - 1; $i > $_SESSION['j']; $i--){
+			for($i = count($_SESSION['historique']) - 1; $i > isset($_SESSION['j']); $i--){
 				echo "<li>";
 				echo $_SESSION["historique"][$i];
 				echo "</li>";
