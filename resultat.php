@@ -60,11 +60,11 @@
 			echo "<h3>Historique :</h3>";
 			echo "<ul>";
 
-			if (count($_SESSION['historique']) > 6 && isset($_SESSION['y'])){
+			if (count($_SESSION['historique']) > 6){
 				$_SESSION['j']++;
 			}
 
-			for($i = count($_SESSION['historique']) - 1; $i > isset($_SESSION['y']); $i--){
+			for($i = count($_SESSION['historique']) - 1; $i > $_SESSION['j']; $i--){
 				echo "<li>";
 				echo $_SESSION["historique"][$i];
 				echo "</li>";
@@ -128,7 +128,6 @@
 		printResult($result);
 
 		$_SESSION['historique'][0] = "Historique vide";
-		$_SESSION['y'] = 2;
 
 		stockResult($number1, $number2, $signe, $result);
 	}
