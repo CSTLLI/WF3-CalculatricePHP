@@ -127,7 +127,7 @@
 	if (is_numeric($result)){
 		printResult($result);
 
-		$_SESSION['historique'][0] = "Historique vide";
+		$_SESSION['historique'][0] = "";
 
 		stockResult($number1, $number2, $signe, $result);
 	}
